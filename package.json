@@ -1,0 +1,32 @@
+{
+  "name": "meowmet-writeups",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build && node scripts/check-links.mjs",
+    "preview": "vite preview",
+    "check:links": "node scripts/check-links.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "^5.2.0",
+    "@fontsource/ibm-plex-mono": "^5.2.0",
+    "@fontsource/instrument-serif": "^5.2.0",
+    "github-slugger": "^2.0.0",
+    "highlight.js": "^11.11.1",
+    "lucide-react": "^0.468.0",
+    "markdown-it": "^14.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.0",
+    "@types/node": "^22.15.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "cheerio": "1.0.0",
+    "typescript": "~5.8.3",
+    "vite": "^6.4.1"
+  }
+}

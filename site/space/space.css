@@ -1,0 +1,95 @@
+.meowverse {
+  --space-ink: #f4efdf;
+  --space-muted: #b5c2ce;
+  --starlight: #f0ce97;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  color-scheme: dark;
+  color: var(--space-ink);
+  background: radial-gradient(ellipse at 69% 39%, #203348 0%, #142338 28%, transparent 62%), linear-gradient(135deg,#0b101e 4%,#101a2c 54%,#090f1e);
+}
+:root[data-theme="dark"] .meowverse { background: radial-gradient(ellipse at 69% 39%,#1c3042 0%,#111f33 30%,transparent 66%),linear-gradient(135deg,#080e19,#11192a 65%,#090d19); }
+.meowverse::before { content:''; position:absolute; inset:0; z-index:-1; opacity:.15; pointer-events:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.84' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Cpath d='M0 0h150v150H0z' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E"); }
+.deep-sky { position:absolute; inset:0; width:100%; height:100%; z-index:-1; pointer-events:none; }
+.space-wrap { position:relative; width:min(92%,90rem); margin:auto; padding-inline:max(0px,env(safe-area-inset-left)) max(0px,env(safe-area-inset-right)); }
+.story-layout { display:grid; grid-template-columns: minmax(19rem,.75fr) minmax(0,1.5fr); align-items:center; min-height:clamp(29rem,72svh,52rem); }
+.story-copy { position:relative; z-index:1; padding-block:3rem; }
+.lost-label,.film-name,#timecode { font: .8rem/1.5 var(--mono); }
+.lost-label { display:flex; align-items:center; gap:.7rem; letter-spacing:.12em; color:#e0c496; text-transform:uppercase; }
+.lost-label span { height:1px; width:1.9rem; background:#dfb97f; }
+.meowverse h1 { color:var(--space-ink); font:400 clamp(4.4rem,6.7vw,7.3rem)/.95 var(--serif); letter-spacing:-.044em; margin:1.3rem 0 1.4rem; }
+.meowverse h1 em { color:var(--starlight); }
+.story-copy p { max-width:26rem; font-size:clamp(1rem,1.23vw,1.2rem); line-height:1.65; color:var(--space-muted); text-wrap:pretty; }
+.flight-links,.film-controls { display:flex; flex-wrap:wrap; gap:.6rem; align-items:center; }
+.flight-links { margin-top:1.65rem; }
+.flight-links a,.flight-links button,.film-controls button { display:inline-flex; gap:.55rem; align-items:center; justify-content:center; font-weight:600; font-size:.93rem; min-height:2.8rem; border-radius:.45rem; }
+.flight-links a,.flight-links button { padding:.65rem 1rem; border:1px solid #6f808e; color:#edf2ee; background:#142130; }
+.flight-links #earth-link { border-color:#f2ce94; background:#f2ce94; color:#29251e; }
+.flight-links a:hover,.flight-links button:hover,.film-controls button:hover { filter:brightness(1.13); }
+.observatory { position:relative; width:100%; min-width:0; }
+.world { display:block; width:100%; height:auto; overflow:visible; touch-action:pan-y; }
+.cat-focus,.radio-focus { fill:none; stroke:#ffe6ab; stroke-width:2; stroke-dasharray:4 4; opacity:0; pointer-events:none; }
+#cat-hit:focus-visible .cat-focus,#radio:focus-visible .radio-focus { opacity:1; }
+.world [role="button"] { cursor:pointer; outline:none; }
+#earth { touch-action:manipulation; }
+#earth:focus-visible > circle:first-child, #garden:focus-visible .moon-target { stroke:#ffe6ab; stroke-dasharray:3 3; }
+.flight-deck { display:flex; align-items:center; gap:1.2rem; padding:1rem 0 max(1.1rem,env(safe-area-inset-bottom)); border-top:1px solid #8facb23b; color:#b7c6cf; }
+.film-name { display:flex; gap:.65rem; align-items:center; min-width:10.6rem; color:#e0e6df; }
+.film-light { width:.45rem; height:.45rem; border-radius:50%; background:#b4d4c6; box-shadow:0 0 .45rem #b4d4c65c; }
+.film-track { height:3px; flex:1; border-radius:1px; background:#384354; overflow:hidden; }
+#playhead { display:block; height:100%; background:#b4cbc9; transform:scaleX(0); transform-origin:left; }
+#timecode { white-space:nowrap; font-size:.75rem; font-variant-numeric:tabular-nums; }
+.film-controls { flex-wrap:nowrap; gap:.4rem; }
+.film-controls button { background:#101a29; color:#e0e6e9; border:1px solid #526073; padding:0 .7rem; font-size:.85rem; }
+.film-controls #rest { width:2.75rem; padding:0; }
+.meowverse :focus-visible { outline:2px solid #ffe5a4; outline-offset:4px; }
+.comms { position:absolute; pointer-events:none; max-width:min(19rem,83%); background:#182936; border:1px solid #8faaa8; box-shadow:0 3px 12px #06101c66; border-radius:.75rem .75rem .75rem 0; padding:.45rem .7rem; color:#fff1d4; font-size:.88rem; line-height:1.4; bottom:3%; right:12%; }
+.achievement { position:absolute; right:0; top:1.2rem; z-index:3; display:flex; align-items:center; gap:.85rem; max-width:100%; padding:.65rem 1.35rem .7rem .8rem; background:repeating-linear-gradient(0deg,#24312f 0 2px,#253330 2px 4px); border:3px solid #84908a; outline:2px solid #182522; box-shadow:inset 2px 2px #adc0ac,inset -3px -3px #444e46,3px 4px #071019; color:#fff3d9; pointer-events:none; }
+.achievement svg { flex:none; }
+.achievement strong,.achievement span { display:block; }
+.achievement strong { font:.86rem var(--mono); color:#ffdb86; margin-bottom:.28rem; }
+.achievement span { font-size:.91rem; }
+.achievement i { font:1rem var(--mono); color:#f4d193; align-self:flex-start; }
+@media (prefers-reduced-motion:no-preference) {
+  .achievement[data-show="true"] { animation: award-in .4s both; }
+  .achievement[data-show="false"] { animation: award-out .4s both; }
+  @keyframes award-in { from { opacity:0; transform:translateX(12px) scale(.95); } 65% {transform:translateX(-2px) scale(1.01); } }
+  @keyframes award-out { to {opacity:0;transform:translateY(-8px);} }
+  .meowverse.departing .world { filter:brightness(1.15); transition:filter .18s; }
+}
+@media (max-width:55rem) {
+  .story-layout { grid-template-columns:minmax(15rem,.7fr) minmax(0,1.3fr); }
+  .space-wrap { width:94%; }
+  .flight-deck { gap:.65rem; }
+}
+@media (max-width:42rem) {
+  .space-wrap { width:calc(100% - 2.25rem); }
+  .story-layout { display:flex; flex-direction:column; min-height:auto; align-items:stretch; }
+  .observatory { order:-1; width:calc(100% + 2.25rem); margin:0 -1.125rem; }
+  .story-copy { padding:.2rem 0 1.5rem; }
+  .meowverse h1 { font-size:clamp(3.55rem,11vw,4.5rem); margin:.65rem 0 .75rem; }
+  .meowverse h1 br { display:none; }
+  .meowverse h1 em::before { content:' '; }
+  .story-copy p { max-width:31rem; }
+  .flight-links { margin-top:1rem; }
+  .flight-deck { display:grid; grid-template-columns:1fr auto; gap:.55rem; padding-top:.75rem; }
+  .film-name { min-width:0; font-size:.74rem; }
+  .film-track { grid-row:2; grid-column:1/-1; }
+  #timecode { grid-row:1; grid-column:2; }
+  .film-controls { grid-column:1/-1; justify-content:flex-end; }
+  .achievement { top:.6rem; right:0; gap:.5rem; padding:.5rem .65rem; }
+  .achievement span {font-size:.84rem;}
+  .comms { right:8%; bottom:0; font-size:.8rem; }
+  #near-stars g:nth-child(even) {display:none;}
+}
+#yarn:focus-visible circle:first-child, #paw-stars:focus-visible circle:first-child { stroke:#ffe6ab; stroke-dasharray:3 3; }
+.film-controls #call-radio { width:2.75rem; padding:0; }
+@media (max-width:42rem) {
+  .film-controls { flex-wrap:wrap; justify-content:flex-start; }
+}
+@media (prefers-reduced-motion:no-preference) {
+  /* Let the night appear first while the controller loads. A failed import still reveals the static art. */
+  :root[data-theme] .meowverse[data-story="still"] #rig { animation: first-light 1s .2s backwards; }
+  @keyframes first-light { from { opacity:0; } to { opacity:1; } }
+}

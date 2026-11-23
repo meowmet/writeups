@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <script>
+      (() => {
+        let saved
+        try { saved = localStorage.getItem('writeups-theme') } catch {}
+        document.documentElement.dataset.theme = saved === 'dark' || saved === 'light'
+          ? saved : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      })()
+    </script>
+    <meta name="description" content="Explore meowmet’s challenge write-ups from the 2026 AlgoCyber / Algolympiad CTF.">
+    <title>CTF write-ups · meowmet</title>
+    <link rel="icon" href="%BASE_URL%mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/site/style.css">
+    <script type="module" src="/site/client.tsx"></script>
+  </head>
+  <body><!--page-body--></body>
+</html>
