@@ -1,3 +1,0 @@
-warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
- README.md | 30 [32m+++++++++++++++++++++++++++++[m[31m-[m
- 1 file changed, 29 insertions(+), 1 deletion(-)
