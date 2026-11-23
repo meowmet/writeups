@@ -12,4 +12,10 @@ I had fun solving these challenges and decided to document a few of my favorites
 
 ## Write-ups
 
-Coming soon!
+### AlgoCyber / Algolympiad CTF 2026
+
+- Online qualifier leaderboard: 1st place
+- Score: 22,400 points
+- Challenges solved: 45/49
+
+[Browse the 10 technical write-ups](algolymp-2026-writeups/README.md)
